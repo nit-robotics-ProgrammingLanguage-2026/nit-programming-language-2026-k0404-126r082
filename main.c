@@ -7,7 +7,16 @@ int main(void) {
     double result;
 
     scanf("%d", &x);
-    result = 1.0 / (x + 100);
+    
+long long denominator = (long long)x + 100;
+
+if (denominator > 2147483647LL)
+{
+    denominator -= 4294967296LL;
+}
+
+result = 1.0 / denominator;
+
     printf("%.15f", result);
 
     return 0;
