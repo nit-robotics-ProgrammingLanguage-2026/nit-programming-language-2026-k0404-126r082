@@ -8,14 +8,7 @@ int main(void) {
 
     scanf("%d", &x);
     
-long long denominator = (long long)x + 100;
-
-if (denominator > 2147483647LL)
-{
-    denominator -= 4294967296LL;
-}
-
-result = 1.0 / denominator;
+result = 1.0 / ((double)x + 100.0);
 
     printf("%.15f", result);
 
